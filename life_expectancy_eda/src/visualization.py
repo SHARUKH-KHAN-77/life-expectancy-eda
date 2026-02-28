@@ -164,10 +164,10 @@ def plot_schooling_vs_life_expectancy(df: pd.DataFrame) -> plt.Figure:
 def plot_correlation_heatmap(df: pd.DataFrame) -> plt.Figure:
     """Annotated heatmap of Pearson correlations among numeric features."""
     numeric_cols = [
-        "Life expectancy", "Adult Mortality", "Infant deaths",
-        "Under-five deaths", "GDP", "Schooling", "BMI",
-        "Alcohol", "percentage expenditure", "Population"
-    ]
+    "Life expectancy", "Adult Mortality", "infant deaths",
+    "under-five deaths", "GDP", "Schooling", "BMI",
+    "Alcohol", "percentage expenditure", "Population"
+]
     corr = df[numeric_cols].corr()
 
     mask = np.triu(np.ones_like(corr, dtype=bool))   # upper triangle masked

@@ -20,8 +20,8 @@ CLEAN_PATH = "data/life_expectancy_clean.csv"
 NUMERIC_COLS = [
     "Life expectancy",
     "Adult Mortality",
-    "Infant deaths",
-    "Under-five deaths",
+    "infant deaths",
+    "under-five deaths",
     "GDP",
     "Schooling",
     "BMI",

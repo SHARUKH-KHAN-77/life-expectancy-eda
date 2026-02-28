@@ -64,7 +64,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import r2_score, mean_squared_error
 
 FEATURES = [
-    "Adult Mortality", "Infant deaths", "GDP", "Schooling",
+    "Adult Mortality", "infant deaths", "GDP", "Schooling",
     "BMI", "Alcohol", "percentage expenditure", "Population",
     "Status_enc", "log_GDP"
 ]

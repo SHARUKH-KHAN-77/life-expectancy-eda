@@ -24,12 +24,12 @@ def create_derived_features(df: pd.DataFrame) -> pd.DataFrame:
     -----------
     log_GDP          : log(GDP + 1) — reduces right skew
     GDP_per_schooling: GDP / Schooling — proxy for economic efficiency
-    mortality_ratio  : Adult Mortality / (Infant deaths + 1)
+    mortality_ratio  : Adult Mortality / (infant deaths + 1)
     """
     df = df.copy()
     df["log_GDP"] = np.log1p(df["GDP"])
     df["GDP_per_schooling"] = df["GDP"] / (df["Schooling"] + 1e-6)
-    df["mortality_ratio"] = df["Adult Mortality"] / (df["Infant deaths"] + 1)
+    df["mortality_ratio"] = df["Adult Mortality"] / (df["infant deaths"] + 1)
     print("[feat_eng] Derived features created: log_GDP, GDP_per_schooling, mortality_ratio")
     return df
 
@@ -50,7 +50,7 @@ def encode_categoricals(df: pd.DataFrame) -> pd.DataFrame:
 SCALE_COLS = [
     "Life expectancy",
     "Adult Mortality",
-    "Infant deaths",
+    "infant deaths",
     "Under-five deaths",
     "GDP",
     "Schooling",
